@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to Music Theory | Dr. Louis Goldford</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<link rel="stylesheet" href="dist/theme/lg.intro.slides.v01.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<!-- <link rel="stylesheet" href="plugin/highlight/monokai.css"> -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+			.special-body-centered {
+				margin: auto;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center !important;
+				width: 100%;
+			}
+			.special-body-centered p {
+				text-align: center !important;
+			}
+			.fragment.highlight-red {
+				opacity: 0 !important;
+				transition: opacity 0.3s ease, color 0.5s ease;
+			}
+			.fragment.highlight-red.visible {
+				opacity: 1 !important;
+				color: black !important;
+			}
+			.fragment.highlight-red.current-fragment {
+				opacity: 1 !important;
+				color: red !important;
+				font-weight: 900;
+			}
+
+			.mind-blown-gif {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				justify-content: center;
+			}
+			
+			.video-overlay {
+				position: absolute !important;
+				bottom: 20px !important;
+				left: 20px !important;
+				z-index: 9999 !important;
+				transform: none !important;
+				margin: 0 !important;
+				top: auto !important;
+				right: auto !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="title-page">
+					<svg> 
+						<symbol id="s-text">
+							<text text-anchor="middle" x="50%" y="80%">Intro to Theory</text>
+							<text text-anchor="middle" x="51%" y="81%">Intro to Theory</text>
+						</symbol>
+						<g class = "g-ants">
+							<use xlink:href="#s-text" class="text-copy"></use>
+							<use xlink:href="#s-text" class="text-copy"></use>
+							<use xlink:href="#s-text" class="text-copy"></use>
+							<use xlink:href="#s-text" class="text-copy"></use>
+							<use xlink:href="#s-text" class="text-copy"></use>
+						</g>
+					</svg>
+					<h5 style="position:absolute;right:10px;bottom:-60px;" class="fade-in-text">Dr. Louis Goldford (2025)</h5>
+					<h6 style="position:absolute;right:10px;bottom:-80px;font-size:0.4em;display:flex;align-items:center;gap:5px;text-align:right;" class="fade-in-text">
+						Prepared for my courses at Bates College. Licensed under 
+						<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" target="_blank" style="display:flex;align-items:center;gap:3px;text-decoration:none;color:inherit;">
+							CC BY-NC-ND 4.0
+							<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png" alt="CC BY-NC-ND 4.0" style="height:20px;">
+						</a>
+					</h6>
+				</section>
+
+				<!-- TABLE OF CONTENTS  -->
+
+				<!-- <section data-auto-animate>
+					<h5 style="text-align: left;">These slides will discuss:</h5>
+				</section>
+				
+				<section class="table-of-contents" data-auto-animate>
+					<h5 style="text-align: left;">These slides will discuss:</h5>
+					<div style="font-size: 0.65em; text-align: left;" data-auto-animate-id="list">
+						<h6><em>Me in Particular?!</em> — Why Am I Talking About This?</h6>
+						<h6 class="fragment">Types of Generative AI</h6>
+						<h6 class="fragment">When are LLMs the Right Tool for the Job?</h6>
+						<h6 class="fragment">The Environmental Costs of AI</h6>
+						<h6 class="fragment">So... (How) Can I Use Generative AI in This Class??</h6>
+					</div>
+				</section>
+
+				<section class="table-of-contents" data-auto-animate>
+					<h5 style="text-align: left;">These slides will discuss:</h5>
+					<div style="font-size: 0.65em; text-align: left;" data-auto-animate-id="list">
+						<h6><em>Me in Particular?!</em> — Why Am I Talking About This?</h6>
+						<h6>Types of Generative AI</h6>
+							<ul>
+								<li>A Super Basic, Somewhat Stupid Neural Network</li>
+								<li>Large Language Models (<strong>LLMs</strong>)</li>
+							</ul>
+						<h6>When are LLMs the Right Tool for the Job?</h6>
+							<ul>
+								<li><strong>Optimization</strong> vs. <strong>Inference</strong></li>
+								<li>Deterministic Problem Solving and <strong>First Principles</strong></li>
+								<li><strong>Probability</strong>-Driven Echoes of Culture</li>
+								<li>Uses & Abuses: Where LLMs Succeed vs. Fail</li>
+							</ul>
+						<h6>The Environmental Costs of AI</h6>
+							<ul>
+								<li><strong>Power Consumption</strong> of the Brain vs. Computer</li>
+								<li>Data Center <strong>Water and Energy</strong> Consumption</li>
+								<li>Choosing Services With <strong>Lower Impact</strong> & Greater Sustainability</li>
+							</ul>
+						<h6>So... (How) Can I Use Generative AI in This Class??</h6>
+					</div>
+				</section> -->
+
+				<!-- Why Me?! — Why Am I (In Particular) Talking About This? -->
+
+				<section class="special-slide" data-auto-animate>
+				<div class="special-header">
+					<h4><em>What is Music Theory?</em> — Discuss!</h4>
+				</div>
+				<div class="special-body" style="display: flex; align-items: center; justify-content: space-between;">
+					<ul style="margin: 0; padding-left: 20px; margin-right: 10px;">
+					<li class="fragment" data-fragment-index="1">Where do you think <strong>“rules”</strong> come from in music?</li>
+					<!-- <li class="fragment" data-fragment-index="2">Where might the rules come from?</li> -->
+					<li class="fragment" data-fragment-index="2">Is music theory a <strong>rulebook</strong> that tells us what music should be?</li>
+					<li class="fragment" data-fragment-index="3">And <strong>who</strong> is making these rules, after all?</li>
+					</ul>
+
+					<div class="fragment" data-fragment-index="1" style="margin-left: 20px;">
+						<img src="img/linda-richman-mike-myers.gif" alt="Talk Amongst Yourselves..." style="width: 280px; height: auto; object-fit: contain;">
+						<!-- <p style="font-size: 0.25em; color: #666; margin-top: 0; text-align: left;">Talk Amongst Yourselves (1725)</p> -->
+					</div>
+					
+				</div>
+				</section>
+
+				<section class="special-slide" data-auto-animate>
+				<div class="special-header">
+					<h4>Descriptive vs. Prescriptive</h4>
+				</div>
+				<div class="special-body" style="display: flex; align-items: center; justify-content: space-between;">
+					<ul style="margin: 0; padding-left: 20px; margin-right: 10px;">
+					<li class="fragment" data-fragment-index="1">The American musicologist <strong>Charles Seeger</strong> distinguished between <strong>prescriptive</strong> and <strong>descriptive</strong> types of music writing:</li>
+					<li class="fragment" data-fragment-index="2"><strong>Prescriptive</strong> music writing: when notation serves as instructions for making particular musical sounds.</li>
+					<li class="fragment" data-fragment-index="3"><strong>Descriptive </strong> music writing: when notation serves as record keeping or analysis of sounds produced.</li>
+					<li class="fragment" data-fragment-index="4"><strong>Prescriptive:</strong> Dictates what “must” be done (e.g., Johann Joseph Fux’s rules for counterpoint).</li>
+					</ul>
+					<div class="fragment" data-fragment-index="4" style="margin-left: 20px;">
+					<img src="img/Fux-Gradus-ad-Parnassum.jpg" alt="Fux Counterpoint" style="width: 280px; height: auto; object-fit: contain;">
+					<p style="font-size: 0.25em; color: #666; margin-top: 0; text-align: left;">Johann Joseph Fux, <em>Gradus ad Parnassum</em> (1725)</p>
+					</div>
+				</div>
+				</section>
+
+				<section class="special-slide" data-auto-animate>
+				<div class="special-header">
+					<h4>Descriptive vs. Prescriptive</h4>
+				</div>
+				<div class="special-body" style="display: flex; align-items: center; justify-content: space-between;">
+					<ul style="margin: 0; padding-left: 20px; margin-right: 10px;">
+					<li class="fragment" data-fragment-index="1"><strong>Descriptive:</strong> Observes and explains what has emerged in practice, or what persists in a discourse (e.g., Gioseffo Zarlino describing how chords were <em>already being tuned</em> by composers of the day).</li>
+					<li class="fragment" data-fragment-index="2">Over time, and depending on how the material is presented and internalized, <strong>descriptions can be mistaken for commandments</strong>.</li>
+					</ul>
+					<div class="fragment" data-fragment-index="1" style="margin-left: 20px;">
+					<img src="img/zarlino.jpg" alt="Gioseffo Zarlino" style="width: 450px; height: auto; object-fit: contain;">
+					<p style="font-size: 0.25em; color: #666; margin-top: 0; text-align: left;">Gioseffo Zarlino, <em>Le istitutioni harmoniche</em> (1558)</p>
+					</div>
+				</div>
+				</section>
+
+				<section class="special-slide" data-auto-animate>
+				<div class="special-header">
+					<h4><em>Emergence</em> — Theory from Practice</h4>
+				</div>
+				<div class="special-body-centered">
+					<h6 style="font-size: 0.8em;">Music theory today often arises from<br><strong>descriptions</strong> of what people are doing...</h6>
+					<p class="fragment">It's a bit like deducing <strong>complex systems</strong> from data in the sciences.</p>
+					<p class="fragment">Patterns <em>emerge</em> when many individuals make <strong>statistically similar</strong> choices over time.</p>
+				</div>
+				</section>
+
+				<section class="special-slide" data-auto-animate>
+				<div class="special-header">
+					<h4>Changing Functions of Notation...</h4>
+				</div>
+				</section>
+
+				<section class="special-slide" id="hypernorm-clip" data-background-iframe="https://www.youtube.com/embed/C9K9PfjRjxM?si=7WJjVA4pbDZrl_AU" data-background-interactive data-autoslide="0">
+					<div style="position: absolute; top: 10px; left: -100px; color: white; background: rgba(0,0,0,0.6); padding: 5px;">
+						<h6 style="margin: 0; color: white; font-size: 0.65em;">Hildegard von Bingen, <em>O Virtus Sapientiae</em> (ca. 1175–1200)</h6>
+					</div>
+				</section>
+
+				<section class="special-slide" id="hypernorm-clip" data-background-iframe="https://www.youtube.com/embed/G-lJy7eZxRM?si=OfpjXIkkb9ScdAEo" data-background-interactive data-autoslide="0">
+					<div style="position: absolute; top: 10px; left: -100px; color: white; background: rgba(0,0,0,0.6); padding: 5px;">
+						<h6 style="margin: 0; color: white; font-size: 0.65em;">Ludwig van Beethoven, <em>Violin Sonata</em> No. 10 in G major, Op. 96 (1812)</h6>
+					</div>
+				</section>
+
+				<section class="special-slide" id="hypernorm-clip" data-background-iframe="https://www.youtube.com/embed/Jjpq2Y4tUGI?si=gxDHnWmeVo4gP_N8" data-background-interactive data-autoslide="0">
+					<div style="position: absolute; top: 10px; left: -100px; color: white; background: rgba(0,0,0,0.6); padding: 5px;">
+						<h6 style="margin: 0; color: white; font-size: 0.65em;">Iannis Xenakis, <em>Metastaseis</em> (1954-55)</h6>
+					</div>
+				</section>
+
+				<section class="special-slide" id="hypernorm-clip" data-background-iframe="https://www.youtube.com/embed/234j2Av1EOM?si=CiBWBL0r_oz_g4Rw" data-background-interactive data-autoslide="0">
+					<div style="position: absolute; top: 10px; left: -100px; color: white; background: rgba(0,0,0,0.6); padding: 5px;">
+						<h6 style="margin: 0; color: white; font-size: 0.65em;">John Cage, <em>Water Walk</em> (1959)</h6>
+					</div>
+				</section>
+
+				<section class="special-slide" id="hypernorm-clip" data-background-iframe="https://www.youtube.com/embed/6jB299aDBsc?si=ZKemsCstEJi4PtzI" data-background-interactive data-autoslide="0">
+					<div style="position: absolute; top: 10px; left: -100px; color: white; background: rgba(0,0,0,0.6); padding: 5px;">
+						<h6 style="margin: 0; color: white; font-size: 0.65em;">Karlheinz Stockhausen, <em>Mikrofonie I</em> (1964)</h6>
+					</div>
+				</section>
+
+				
+				<section class="special-slide" data-auto-animate>
+				<div class="special-header">
+					<h4>Paradigm Shifts...</h4>
+				</div>
+				</section>
+
+				<section class="special-slide" data-transition="slide">
+				<div class="special-body-centered">
+					<h6 style="font-size: 0.8em;">So... <strong>What Is Music Theory?</strong></h6>
+					<p class="fragment">Not commandments from above.</p>
+					<p class="fragment">Not a fixed measure of beauty.</p>
+					<p class="fragment">But a way of <strong>describing</strong> patterns that emerge,</p>
+					<p class="fragment">of <strong>formalizing</strong> how we hear, group, and make sense of music.</p>
+					<p class="fragment">And a reminder that our definitions will keep changing.</p>
+					<p class="fragment"><em>Looking forward to an exciting semester!</em></p>
+				</div>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+			// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+			var header = $('#header').html();
+			if ( window.location.search.match( /print-pdf/gi ) ) {
+				Reveal.addEventListener( 'ready', function( event ) {
+					$('.slide-background').append(header);
+				});
+			}
+			else {
+				$('div.reveal').append(header);
+		   }
+		</script> -->
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				progress: true,
+				slideNumber: "c/t",
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+		</script>
+	</body>
+</html>
